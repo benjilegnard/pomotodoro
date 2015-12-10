@@ -3,6 +3,7 @@ var gulp = require('gulp')
   , less = require('gulp-less')
   , minifyCss = require('gulp-minify-css')
   , sourcemaps = require('gulp-sourcemaps')
+  , connect = require('gulp-connect')
   , b = require('browserify')
 ;
 
