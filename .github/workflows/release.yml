@@ -1,0 +1,15 @@
+
+name: Release
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+      - '**.spec.js'
+      - '.idea'
+      - '.gitignore'
+      - '.github/**'
+      - '!.github/workflows/release.yml'
+
+# https://github.com/cawa-93/vite-electron-builder/blob/main/.github/workflows/release.yml
