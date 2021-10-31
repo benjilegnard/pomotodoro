@@ -1,6 +1,6 @@
-@mainTextColor  : #333;
-@backgroundColor: #FFF;
-@fontFamily     : 'Montserrat Alternates',Verdana,sans-serif;
+$mainTextColor  : #333;
+$backgroundColor: #FFF;
+$fontFamily     : 'Montserrat Alternates',Verdana,sans-serif;
 
 .pmtdr-{
   &header{
@@ -8,7 +8,7 @@
       margin-right: 1rem; display: table-cell;
     }
     h1{
-      font-family: @fontFamily;
+      font-family: $fontFamily;
       text-transform: uppercase;
       display: table-cell;
       font-size: 3rem;

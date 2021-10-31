@@ -1,41 +1,59 @@
 {
   "name": "pomotodoro",
   "version": "1.0.0",
-  "description": "A pomodorot technique timer coupledwith a todo list manager.",
-  "main": "src/index.js",
+  "description": "A pomodoro technique timer coupled with a todo list manager.",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "start": "electron .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jibhaine/pomotodoro.git"
+    "url": "git+https://github.com/benjilegnard/pomotodoro.git"
   },
   "keywords": [
     "pomodoro",
     "electron"
   ],
-  "author": "jibhaine",
+  "author": "Benjamin Legrand <benjilegnard@protonmail.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/jibhaine/pomotodoro/issues"
+    "url": "https://github.com/benjilegnard/pomotodoro/issues"
   },
-  "homepage": "https://github.com/jibhaine/pomotodoro#readme",
+  "homepage": "https://github.com/benjilegnard/pomotodoro#readme",
+  "build": {
+    "appId": "net.benjaminlegrand.pomotodoro",
+    "productName": "Pomotodoto",
+    "copyright": "Copyright © 2021 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "files": [
+      "dist/**/*"
+    ]
+  },
   "devDependencies": {
-    "browserify": "^11.1.0",
-    "chai": "^3.2.0",
-    "electron-packager": "^5.1.0",
-    "electron-prebuilt": "^0.32.3",
-    "gulp": "^3.9.0",
-    "gulp-browserify": "^0.5.1",
-    "gulp-less": "^3.0.3",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-react": "^3.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-util": "^3.0.6",
-    "mocha": "^2.3.2",
-    "require-dir": "^0.3.0",
-    "sinon": "^1.16.1",
-    "sinon-chai": "^2.8.0"
+    "@types/jest": "^27.0.2",
+    "@types/node": "^14.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "electron": "^15.3.0",
+    "electron-builder": "^22.13.1",
+    "eslint": "^8.1.0",
+    "jest": "^27.0.0",
+    "prettier": "^2.4.1",
+    "sass": "^1.43.4",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.13"
+  },
+  "dependencies": {
+    "lit": "^2.0.2",
+    "rxjs": "^7.4.0"
   }
 }
